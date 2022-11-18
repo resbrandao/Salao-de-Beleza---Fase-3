@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#972121">
+
+            <TextView
+                android:id="@+id/text_view_agendamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Agendamento"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view_cliente_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Cliente:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_agendamento" />
+
+            <TextView
+                android:id="@+id/text_view_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_cliente_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_agendamento"
+                tools:text="Nome Completo do Cliente" />
+
+
+            <TextView
+                android:id="@+id/text_view_servico_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="Serviço:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_cliente_label" />
+
+            <TextView
+                android:id="@+id/text_view_servico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_servico_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_cliente"
+                tools:text="Cabelo" />
+
+            <TextView
+                android:id="@+id/text_view_profissional_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="6dp"
+                android:text="Profissional:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/text_view_servico"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_cliente" />
+
+            <TextView
+                android:id="@+id/text_view_profissional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_profissional_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_cliente"
+                tools:text="Nome do Profissional" />
+
+<!--            <TextView
+                android:id="@+id/text_view_especialidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_profissional"
+                app:layout_constraintStart_toEndOf="@+id/text_view_cliente"
+                app:layout_constraintTop_toBottomOf="@+id/text_status_label"
+                tools:text="Nome da Especialidade" />
+-->
+            <TextView
+                android:id="@+id/text_view_descricao_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="Descrição:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_servico_label" />
+
+            <TextView
+                android:id="@+id/text_view_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_descricao_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_servico"
+                tools:text="Alguma observação para fazer sobre o corte" />
+
+
+            <TextView
+                android:id="@+id/text_view_unidade_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="Unidade Salão:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_descricao_label" />
+
+            <TextView
+                android:id="@+id/text_view_unidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/text_view_unidade_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_descricao"
+                tools:text="Cidade atendimento" />
+
+            <TextView
+                android:id="@+id/text_view_quantidade_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:text="Quantidade:"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/text_view_unidade"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_descricao" />
+
+            <TextView
+                android:id="@+id/text_view_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_view_quantidade_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_descricao"
+                tools:text="2 cortes" />
+
+            <TextView
+                android:id="@+id/text_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/text_status_label"
+                app:layout_constraintStart_toEndOf="@+id/text_view_agendamento"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="20/20/2020" />
+
+            <TextView
+                android:id="@+id/text_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="6dp"
+                android:text="Status:"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/text_status"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Status atendido" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
